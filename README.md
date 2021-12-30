@@ -13,7 +13,7 @@ Diagnosis of COVID-19 from chest X-Ray images with Convolutional Neural Networks
 ## Architecture
 ![arch](https://user-images.githubusercontent.com/59311154/147398860-dda20cb7-51b2-4725-9cd3-48074a728e4b.png)
 The architecture is largely based on EMCNet[^1]. The images are scaled to (299,299,3) and normalized. The CNN was trained in **Google Colab** with GPU runtime. The CNN is used to extract features from the images. It outputs a vector of dimensions 64x1. This feature vector is used to train the machine learning models and an ensemble of the 4 classifiers - Decision Tree, Support Vector Machine, Random Forest and AdaBoost proved to deliver the maximum accuracy.
-![cnn drawio](https://user-images.githubusercontent.com/59311154/147398969-ec2a7644-5928-4300-beed-d7e98a98aa36.png)
+![CNN drawio](https://user-images.githubusercontent.com/59311154/147759153-1ba1d4e4-33ea-4875-b188-13dd125a6093.png)
 The CNN has 20 layers of various types including Conv2D, MaxPooling2D, Dropout and FCL. ReLu activation function is used for the inner layers and dropout threshold of 0.25. The CNN reached an accuracy of **97.10%**. The final Soft voting classifier reached an accuracy of **97.51%**. The intermediate layers' activations are visualized to get a sense of what's going on inside the CNN[^2].
 
 ## Dataset
